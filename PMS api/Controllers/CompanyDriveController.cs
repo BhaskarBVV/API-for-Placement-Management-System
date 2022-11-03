@@ -18,7 +18,7 @@ namespace PMS_api.Controllers
 
         // Add new company
         [Authorize]
-        [HttpPost("/AddCompany")]
+        [HttpPost("/Companies")]
         public IActionResult AddCompany([FromBody] Companies cp)
         {
             cp.company_name = cp.company_name.ToLower();
@@ -54,7 +54,7 @@ namespace PMS_api.Controllers
 
         // Add a selected student
         [Authorize]
-        [HttpPost("/AddPlaced")]
+        [HttpPost("/Placed")]
         public IActionResult AddPlaced([FromBody] Placed st)
         {
             if (!Validations.ValidateRoll(st.roll_number))
@@ -119,7 +119,7 @@ namespace PMS_api.Controllers
 
         //Delete a Placed student
         [Authorize]
-        [HttpDelete("/Placed/Delete/{roll}")]
+        [HttpDelete("/Placed/{roll}")]
         public IActionResult DeletePlaced(long roll)
         {
             if (!Validations.ValidateRoll(roll))

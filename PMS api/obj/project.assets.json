@@ -2566,19 +2566,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bhaskar\\.nuget\\packages\\": {}
+    "C:\\Users\\bvarshney\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C-practice\\PMS api\\PMS api\\PMS api.csproj",
+      "projectUniqueName": "C:\\API-for-Placement-Management-System\\PMS api\\PMS api.csproj",
       "projectName": "PMS api",
-      "projectPath": "D:\\C-practice\\PMS api\\PMS api\\PMS api.csproj",
-      "packagesPath": "C:\\Users\\Bhaskar\\.nuget\\packages\\",
-      "outputPath": "D:\\C-practice\\PMS api\\PMS api\\obj\\",
+      "projectPath": "C:\\API-for-Placement-Management-System\\PMS api\\PMS api.csproj",
+      "packagesPath": "C:\\Users\\bvarshney\\.nuget\\packages\\",
+      "outputPath": "C:\\API-for-Placement-Management-System\\PMS api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Bhaskar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bvarshney\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

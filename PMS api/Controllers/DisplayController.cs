@@ -45,7 +45,7 @@ namespace PMS_api.Controllers
         public IActionResult GetPlaced()
         {
             if(_dbC.Placed.Count()==0)
-                return NotFound("No Student is placed yet");
+                return Ok("No Student is placed yet");
             return Ok(_dbC.Placed);
         }
 
@@ -61,7 +61,7 @@ namespace PMS_api.Controllers
 
             var isPlaced = _dbC.Placed.FirstOrDefault(x => x.roll_number == roll);
             if(isPlaced==null)
-                return NotFound("Student is not placed yet");
+                return Ok("Student is not placed yet");
 
             var compName = GetDataFromDb.GetPlacedInWhichCompany(roll);
             return Ok("Selected student is placed in " + compName[0].name);
