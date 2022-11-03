@@ -7,12 +7,6 @@ namespace PMS_api.Data
 {
     public class ApiDbContext:DbContext
     {
-        public ApiDbContext() { }
-        public IConfiguration config;
-        ApiDbContext(IConfiguration configuration)
-        {
-            config = configuration;
-        }
         public DbSet<Student> Student { get; set; }
         public DbSet<Companies> Companies { get; set; }
         public DbSet<Placed> Placed { get; set; }
@@ -20,7 +14,11 @@ namespace PMS_api.Data
         public DbSet<User> User { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server=LAP-55436; Database=Placement; Integrated Security=true;");
+            IConfigurationRoot config = new ConfigurationBuilder()
+           .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+           .AddJsonFile("appsettings.json")
+           .Build();
+            optionsBuilder.UseSqlServer(config.GetConnectionString("Connection"));
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
