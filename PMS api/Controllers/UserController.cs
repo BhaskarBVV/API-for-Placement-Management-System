@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PMS_api.Data;
 using System.Linq;
@@ -46,7 +46,7 @@ namespace PMS_api.Controllers
                 expires: DateTime.Now.AddMinutes(60),
                 signingCredentials: credentials);
             var jwt = new JwtSecurityTokenHandler().WriteToken(token);
-            return Ok(jwt);
+            return Ok(new {token=jwt}); // send the jwt token in the json format.
         }
 
     }  
